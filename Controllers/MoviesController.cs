@@ -90,7 +90,7 @@ namespace sampleMVC.Controllers
     // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price")] Movie movie)
+    public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price,Rating")] Movie movie)
     {
       if (ModelState.IsValid)
       {
@@ -153,7 +153,7 @@ namespace sampleMVC.Controllers
     }
 
     // GET: Movies/Delete/5
-    public async Task<IActionResult> Delete(int? id)
+    public async Task<IActionResult> Delete(int? id, bool notUsed)
     {
       if (id == null || _context.Movie == null)
       {

@@ -51,6 +51,14 @@ public static class SeedData
             Genre = "Western",
             Price = 3.99M,
             Rating = "A+"
+          },
+          new Movie
+          {
+            Title = "Blue Beettle",
+            ReleaseDate = DateTime.Parse("2023-05-10"),
+            Genre = "Western",
+            Price = 4.5M,
+            Rating = "A-"
           }
       );
       context.SaveChanges();
